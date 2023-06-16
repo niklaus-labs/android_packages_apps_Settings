@@ -236,4 +236,8 @@
     <string name="vehicle_motion_cues_sensitivity_summary">Strength of the dot translations relative to vehicle forces</string>
     <string name="vehicle_motion_cues_dot_count_title">Dot Count</string>
     <string name="vehicle_motion_cues_dot_count_summary">Number of animated motion cue dots shown along the screen margins</string>
+
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">Smart 5G</string>
+    <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
 </resources>
