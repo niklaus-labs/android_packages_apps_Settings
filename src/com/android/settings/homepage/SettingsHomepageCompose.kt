@@ -122,16 +122,18 @@ fun SettingsHomepageScreen(
     isSupportAvailable: Boolean = false,
     isWellbeingAvailable: Boolean = false,
     isGoogleAvailable: Boolean = false,
+    isDeviceSettingsAvailable: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
     val connectionItems = listOf(
         SettingsEntry(Icons.Outlined.Wifi, stringResource(R.string.network_dashboard_title), key = "top_level_network"),
         SettingsEntry(Icons.Outlined.Devices, stringResource(R.string.connected_devices_dashboard_title), key = "top_level_connected_devices"),
     )
-    val customizeItems = listOf(
-        SettingsEntry(Icons.Outlined.Dashboard, "Personalize", key = "axion_hub"),
-        SettingsEntry(Icons.Outlined.Wallpaper, "Wallpaper & styles", key = "axion_themepicker"),
-    )
+    val customizeItems = buildList {
+        if (isDeviceSettingsAvailable) add(SettingsEntry(Icons.Outlined.Devices, "OnePlus Settings", key = "top_level_device_settings"))
+        add(SettingsEntry(Icons.Outlined.Dashboard, "Personalize", key = "axion_hub"))
+        add(SettingsEntry(Icons.Outlined.Wallpaper, "Wallpaper & styles", key = "axion_themepicker"))
+    }
     val displayItems = buildList {
         if (isCommunalAvailable) add(SettingsEntry(Icons.Outlined.Home, stringResource(R.string.communal_settings_title), key = "top_level_communal"))
         add(SettingsEntry(Icons.Outlined.LightMode, stringResource(R.string.display_settings), key = "top_level_display"))
@@ -362,6 +364,7 @@ object SettingsHomepageComposeInterop {
         isSupportAvailable: Boolean,
         isWellbeingAvailable: Boolean,
         isGoogleAvailable: Boolean,
+        isDeviceSettingsAvailable: Boolean,
     ) {
         view.setContent {
             val userNameMutableState = remember { mutableStateOf(userName) }
@@ -382,6 +385,7 @@ object SettingsHomepageComposeInterop {
                     isSupportAvailable = isSupportAvailable,
                     isWellbeingAvailable = isWellbeingAvailable,
                     isGoogleAvailable = isGoogleAvailable,
+                    isDeviceSettingsAvailable = isDeviceSettingsAvailable,
                 )
             }
         }
