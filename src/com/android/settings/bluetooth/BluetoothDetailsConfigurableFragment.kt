@@ -293,6 +293,7 @@ abstract class BluetoothDetailsConfigurableFragment :
                 logItemShown(pref.key, pref.isVisible)
             }
         }
+        configDisplayOrder.add(BluetoothDetailsMelodyController.KEY_MELODY_DEVICE_CONTROLS)
         displayOrder = configDisplayOrder
         updatePreferenceOrder()
     }
