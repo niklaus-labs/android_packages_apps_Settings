@@ -78,6 +78,13 @@
     <PreferenceCategory
         android:key="device_companion_apps"/>
 
+    <Preference
+        android:key="melody_device_controls"
+        android:persistent="false"
+        android:title="@string/bluetooth_melody_device_controls"
+        android:summary="@string/bluetooth_melody_device_controls_summary"
+        android:visible="false"/>
+
     <com.android.settingslib.widget.UntitledPreferenceCategory
         android:key="hearing_device_group" />
 
