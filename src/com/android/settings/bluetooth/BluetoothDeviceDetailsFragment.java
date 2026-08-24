@@ -298,6 +298,8 @@ public class BluetoothDeviceDetailsFragment extends BluetoothDetailsConfigurable
                             context, this, localBluetoothManager, cachedDevice, lifecycle));
             controllers.add(new BluetoothDetailsCompanionAppsController(context, this,
                     cachedDevice, lifecycle));
+            controllers.add(new BluetoothDetailsMelodyController(context, this,
+                    cachedDevice, lifecycle));
             controllers.add(new BluetoothDetailsAudioDeviceTypeController(context, this,
                     localBluetoothManager,
                     cachedDevice, lifecycle));

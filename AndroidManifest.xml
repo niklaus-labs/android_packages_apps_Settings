@@ -6,6 +6,11 @@
 
     <original-package android:name="com.android.settings"/>
 
+    <queries>
+        <package android:name="com.oplus.melody" />
+        <provider android:authorities="com.oplus.melody.providers.MelodyProvider" />
+    </queries>
+
     <!-- Permissions for reading or writing battery-related data. -->
     <permission
         android:name="com.android.settings.BATTERY_DATA"

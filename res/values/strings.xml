@@ -217,6 +217,10 @@
     <string name="bluetooth_audio_routing_summary">Route sounds to your hearing device or phone speaker</string>
     <!-- Title for related tools section. This section will list related tools below. [CHAR LIMIT=15] -->
     <string name="bluetooth_screen_related">Related</string>
+    <!-- Title for opening the Oplus Melody controls for supported Bluetooth earphones. -->
+    <string name="bluetooth_melody_device_controls">Wireless earphones</string>
+    <!-- Summary for opening the Oplus Melody controls for supported Bluetooth earphones. -->
+    <string name="bluetooth_melody_device_controls_summary">Earphone controls and firmware updates</string>
     <!-- Title for trying Nearby Sharing in Bluetooth Sharing screen. [BACKUP_MESSAGE_ID=2307943703595855441] -->
     <string name="bluetooth_try_nearby_share_title">Try <xliff:g id="Nearby Sharing app label" example="Nearby Sharing">%s</xliff:g></string>
     <!-- Summary for trying Nearby Sharing in Bluetooth Sharing screen. [BACKUP_MESSAGE_ID=2808932450696996548] -->
